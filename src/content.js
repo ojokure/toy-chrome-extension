@@ -6,13 +6,13 @@ import ReactDOM from 'react-dom';
 import Frame, { FrameContextConsumer }from 'react-frame-component';
 import "./content.css";
 
-// chrome.runtime.onMessage.addListener(
-//     function(request, sender, sendResponse) {
-//        if( request.message === "clicked_browser_action") {
-//          toggle();
-//        }
-//     }
-//  );
+chrome.runtime.onMessage.addListener(
+    function(request, sender, sendResponse) {
+       if( request.message === "clicked_browser_action") {
+         toggle();
+       }
+    }
+ );
  
  function toggle(){
      console.log('lol')
